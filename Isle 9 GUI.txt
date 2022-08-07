@@ -1,0 +1,313 @@
+local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+
+local MainUI = UILibrary.Load("Isle GUI")
+local FirstPage = MainUI.AddPage("Home")
+
+local FirstLabel = FirstPage.AddLabel("Epic Stuffs")
+local FirstButton = FirstPage.AddButton("Isle Scripts GUI [Having Skill Issue]", function()
+loadstring(game:HttpGetAsync("https://paste.ee/r/M1Hgt/0"))()
+end)
+
+local FirstButton = FirstPage.AddButton("Hunters Folder ESP (Bad)", function()
+for __,v in pairs(game.Workspace.AIHunter:GetChildren()) do
+if v:IsA("Model") or v:IsA("Part") or v:IsA("MeshPart") then
+local a = Instance.new("BillboardGui",v)
+a.Size = UDim2.new(1,0, 1,0)
+a.Name = "A"
+a.AlwaysOnTop = true
+local b = Instance.new("Frame",a)
+b.Size = UDim2.new(1,0, 1,0)
+b.BackgroundTransparency = 1
+b.BorderSizePixel = 0
+local c = Instance.new("TextLabel",b)
+c.Text = v.Name
+c.Size = UDim2.new(1,0, 1,0)
+c.TextColor3 = Color3.fromRGB(255,255,255)
+c.TextStrokeTransparency = 0
+c.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+c.BackgroundTransparency = 1
+c.BorderSizePixel = 0
+end
+end
+end)
+
+local FirstButton = FirstPage.AddButton("Collectibles ESP BETA", function()
+function GetCamera() -- Just in case some game renames the player's camera.
+	return workspace:FindFirstChildOfClass("Camera")
+end
+local Plrs = game.Players
+local MyPlr = Plrs.LocalPlayer
+local MyChar = MyPlr.Character
+local MyMouse = MyPlr:GetMouse()
+local MyCam = GetCamera()
+local fasfh = 0
+local Tracers = Instance.new("Folder", MyCam)
+Tracers.Name = "gg"
+local TracerData = { }
+local TracerMT = setmetatable(TracerData, {
+	__newindex = function(tab, index, val)
+		rawset(tab, index, val)
+	end
+})
+
+function GetSizeOfObject(Obj)
+	if Obj:IsA("BasePart") then
+		return Obj.Size
+	elseif Obj:IsA("Model") then
+		return Obj:GetExtentsSize()
+	end
+end
+
+local Bullshit  = {
+TracersLength = 2048,
+Colors = {
+		Enemy = Color3.new(1, 0, 0),
+		Ally = Color3.new(0, 1, 0),
+		Friend = Color3.new(1, 1, 0),
+		Neutral = Color3.new(1, 1, 1),
+		Crosshair = Color3.new(1, 0, 0),
+		ColorOverride = nil, -- Every player will have the chosen color regardless of enemy or ally.
+	},
+TracersEnabled = true
+}
+
+
+
+function UpdateTracer(Plr)
+		if MyChar then
+			local MyTor = MyChar:FindFirstChild("HumanoidRootPart")
+			local GetTor = Plr
+			if MyTor   then
+				local Dist = (MyTor.Position - GetTor.Position).magnitude
+				if (Dist < Bullshit.TracersLength ) then
+						
+
+
+				end 
+			end
+		end
+end
+
+
+
+function CreateTracers(Plr,dis)
+	local Find = Tracers:FindFirstChild(Plr)
+    local MyTor =  MyChar.HumanoidRootPart
+	if not Find then
+		local P = Instance.new("Part")
+		P.Material = "Neon"
+		P.Transparency = 1
+		P.Anchored = true
+		P.Locked = true
+		P.CanCollide = false
+		local B = Instance.new("BoxHandleAdornment", P)
+		B.Adornee = P
+		B.Size = GetSizeOfObject(P)
+		B.AlwaysOnTop = true
+		B.ZIndex = 5
+		B.Transparency = 0
+		B.Color3 = Bullshit.Colors.Enemy
+		P.Parent = Tracers
+print('aeae')
+fasfh = fasfh + 1
+print(fasfh)
+        coroutine.resume(coroutine.create(function()
+			while true do
+wait()
+
+               local Dist = (MyTor.Position - P.Position).magnitude
+                local GetTor = Plr
+local Dist2 = (MyTor.Position - GetTor.Position).magnitude
+dis.Text = "Distance: " .. string.format("%.0f", Dist2)
+if (Dist < Bullshit.TracersLength ) then
+                        Dist = (MyTor.Position - (GetTor.Position - Vector3.new(0, 3, 0))).magnitude
+
+						P.Transparency = 1
+                        
+						P.Size = Vector3.new(0.3, 0.3, Dist)
+						P.CFrame = CFrame.new(MyTor.Position - Vector3.new(0, 3, 0), (GetTor.Position - Vector3.new(0, 4.5, 0))) * CFrame.new(0, 0, -Dist / 2)
+						P.BoxHandleAdornment.Transparency = 0
+						P.BoxHandleAdornment.Size = Vector3.new(0.05, 0.05, Dist)
+                        P.BoxHandleAdornment.Color3 =  Bullshit.Colors.Enemy
+			end
+end
+		end))
+	end
+end
+
+
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local gegege = 0
+--Properties:
+local LocalPlayer = game.Players.LocalPlayer
+local CurrentCamera = workspace.CurrentCamera
+local WorldToViewportPoint = CurrentCamera.WorldToViewportPoint
+
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+for i,e in pairs(game.Workspace.Collectibles:GetChildren()) do
+local script = Instance.new('LocalScript', ScreenGui)
+		
+			if e:IsA("Model") or e:IsA("Part") or e:IsA("MeshPart") then
+            if e:FindFirstChildOfClass("ClickDetector") then
+	local BillboardGui = Instance.new("BillboardGui")
+	local TextLabel = Instance.new("TextLabel")
+local TextLabel2 = Instance.new("TextLabel")
+	BillboardGui.Parent = script.Parent
+	BillboardGui.AlwaysOnTop = true
+	BillboardGui.Adornee = e
+	BillboardGui.LightInfluence = 1
+	BillboardGui.Size = UDim2.new(1, 50, 1, 50)
+	BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	BillboardGui.MaxDistance = MAXDIS
+	TextLabel.Parent = BillboardGui
+	TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	TextLabel.BackgroundTransparency = 1
+	TextLabel.Size = UDim2.new(1, 0, 1, 0)
+	TextLabel.Text = e.Name
+	TextLabel.TextColor3 = Color3.new(255, 0, 255)
+	TextLabel.TextScaled = true
+TextLabel2.Parent = BillboardGui
+	TextLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+	TextLabel2.BackgroundTransparency = 1
+    TextLabel2.Position = UDim2.new(0.8,0,0)
+	TextLabel2.Size = UDim2.new(1, 0, 1, 0)
+	TextLabel2.Text = "AEAE"
+	TextLabel2.TextColor3 = Color3.new(255, 0, 0)
+	TextLabel2.TextScaled = true
+gegege = gegege + 1
+CreateTracers(e,TextLabel2)
+print(gegege)
+elseif e:FindFirstChildOfClass("Part") then
+    local BillboardGui = Instance.new("BillboardGui")
+	local TextLabel = Instance.new("TextLabel")
+local TextLabel2 = Instance.new("TextLabel")
+	BillboardGui.Parent = script.Parent
+	BillboardGui.AlwaysOnTop = true
+	BillboardGui.Adornee = e
+	BillboardGui.LightInfluence = 1
+	BillboardGui.Size = UDim2.new(1, 50, 1, 50)
+	BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
+	BillboardGui.MaxDistance = MAXDIS
+	TextLabel.Parent = BillboardGui
+	TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+	TextLabel.BackgroundTransparency = 1
+	TextLabel.Size = UDim2.new(1, 0, 1, 0)
+	TextLabel.Text = e.Name
+	TextLabel.TextColor3 = Color3.new(255, 0, 255)
+	TextLabel.TextScaled = true
+    TextLabel2.Parent = BillboardGui
+	TextLabel2.BackgroundColor3 = Color3.new(1, 1, 1)
+	TextLabel2.BackgroundTransparency = 1
+    TextLabel2.Position = UDim2.new(0.8,0,0)
+	TextLabel2.Size = UDim2.new(1, 0, 1, 0)
+	TextLabel2.Text = "Getting distance"
+	TextLabel2.TextColor3 = Color3.new(255, 0, 0)
+	TextLabel2.TextScaled = true
+    CreateTracers(e:GetModelCFrame(),TextLabel2)
+gegege = gegege + 1
+
+print(gegege)
+
+    end
+end
+end
+
+end)
+
+local FirstButton = FirstPage.AddButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local FirstButton = FirstPage.AddButton("[Q] Speed -Speed Config Binds [ and ]-", function()
+local Players = game:service('Players')
+
+local Player = Players.LocalPlayer
+
+ 
+
+local userInput = game:service('UserInputService')
+
+local runService = game:service('RunService')
+
+ 
+
+repeat wait() until Player.Character
+
+ 
+
+local Character = Player.Character
+
+local pHum = Character:WaitForChild('Humanoid')
+
+local humRoot = Character:WaitForChild('HumanoidRootPart')
+
+ 
+
+local Multiplier = 0.1
+
+ 
+
+userInput.InputBegan:connect(function(Key)
+
+    if Key.KeyCode == Enum.KeyCode.LeftBracket then
+
+        Multiplier = Multiplier + 0.1
+
+        print(Multiplier)
+
+        wait(0.2)
+
+        while userInput:IsKeyDown(Enum.KeyCode.LeftBracket) do
+
+            wait()
+
+            Multiplier = Multiplier + 0.1
+
+            print(Multiplier)
+
+        end
+
+    end
+
+
+
+    if Key.KeyCode == Enum.KeyCode.RightBracket then
+
+        Multiplier = Multiplier - 0.1
+
+        print(Multiplier)
+
+        wait(0.2)
+
+        while userInput:IsKeyDown(Enum.KeyCode.RightBracket) do
+
+            wait()
+
+            Multiplier = Multiplier - 0.1
+
+            print(Multiplier)
+
+        end
+
+    end
+
+end)
+
+ 
+
+runService.Stepped:connect(function()
+
+    if userInput:IsKeyDown(Enum.KeyCode.Q) then
+
+        humRoot.CFrame = humRoot.CFrame + pHum.MoveDirection * Multiplier
+
+    end
+
+end)
+end)
