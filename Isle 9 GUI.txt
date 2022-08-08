@@ -9,10 +9,6 @@ local FirstButton = FirstPage.AddButton("DEX Explorer (For KRNL Users :troll:)",
 loadstring(game:HttpGet("https://raw.githubusercontent.com/yeehawwasd123/ye/main/dex%20source", true))()
 end)
 
-local FirstButton = FirstPage.AddButton("Isle Scripts GUI [Having Skill Issue]", function()
-loadstring(game:HttpGetAsync("https://paste.ee/r/M1Hgt/0"))()
-end)
-
 local FirstButton = FirstPage.AddButton("Hunters Folder ESP (Bad)", function()
 for __,v in pairs(game.Workspace.AIHunter:GetChildren()) do
 if v:IsA("Model") or v:IsA("Part") or v:IsA("MeshPart") then
@@ -36,7 +32,7 @@ end
 end
 end)
 
-local FirstButton = FirstPage.AddButton("Collectibles ESP BETA", function()
+local FirstButton = FirstPage.AddButton("Collectibles ESP BETA (Fixing)", function()
 function GetCamera() -- Just in case some game renames the player's camera.
 	return workspace:FindFirstChildOfClass("Camera")
 end
