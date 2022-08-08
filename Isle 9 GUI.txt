@@ -1,15 +1,104 @@
 local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
 
 local MainUI = UILibrary.Load("Isle GUI")
-local FirstPage = MainUI.AddPage("Home")
+local FirstPage = MainUI.AddPage("Main")
 
-local FirstLabel = FirstPage.AddLabel("Stuff")
-
-local FirstButton = FirstPage.AddButton("DEX Explorer (For KRNL Users :troll:)", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/yeehawwasd123/ye/main/dex%20source", true))()
+local FirstButton = FirstPage.AddButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-local FirstButton = FirstPage.AddButton("Hunters Folder ESP (Bad)", function()
+local FirstLabel = FirstPage.AddLabel("NOTE: Speed breaks when respawn")
+local FirstLabel = FirstPage.AddLabel("Speed Config Binds: [ and ]")
+
+local FirstButton = FirstPage.AddButton("[Q] Speed -Speed Config Binds are [ and ]-", function()
+local Players = game:service('Players')
+
+local Player = Players.LocalPlayer
+
+ 
+
+local userInput = game:service('UserInputService')
+
+local runService = game:service('RunService')
+
+ 
+
+repeat wait() until Player.Character
+
+ 
+
+local Character = Player.Character
+
+local pHum = Character:WaitForChild('Humanoid')
+
+local humRoot = Character:WaitForChild('HumanoidRootPart')
+
+ 
+
+local Multiplier = 0.1
+
+ 
+
+userInput.InputBegan:connect(function(Key)
+
+    if Key.KeyCode == Enum.KeyCode.LeftBracket then
+
+        Multiplier = Multiplier + 0.1
+
+        print(Multiplier)
+
+        wait(0.2)
+
+        while userInput:IsKeyDown(Enum.KeyCode.LeftBracket) do
+
+            wait()
+
+            Multiplier = Multiplier + 0.1
+
+            print(Multiplier)
+
+        end
+
+    end
+
+
+
+    if Key.KeyCode == Enum.KeyCode.RightBracket then
+
+        Multiplier = Multiplier - 0.1
+
+        print(Multiplier)
+
+        wait(0.2)
+
+        while userInput:IsKeyDown(Enum.KeyCode.RightBracket) do
+
+            wait()
+
+            Multiplier = Multiplier - 0.1
+
+            print(Multiplier)
+
+        end
+
+    end
+
+end)
+
+ 
+
+runService.Stepped:connect(function()
+
+    if userInput:IsKeyDown(Enum.KeyCode.Q) then
+
+        humRoot.CFrame = humRoot.CFrame + pHum.MoveDirection * Multiplier
+
+    end
+
+end)
+end)
+
+local FirstButton = FirstPage.AddButton("Mercenaries ESP (Bad)", function()
 for __,v in pairs(game.Workspace.AIHunter:GetChildren()) do
 if v:IsA("Model") or v:IsA("Part") or v:IsA("MeshPart") then
 local a = Instance.new("BillboardGui",v)
@@ -221,94 +310,9 @@ end
 
 end)
 
-local FirstButton = FirstPage.AddButton("Infinite Yield", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
+local SecondPage = MainUI.AddPage("Misc")
 
-local FirstButton = FirstPage.AddButton("[Q] Speed -Speed Config Binds [ and ]-", function()
-local Players = game:service('Players')
-
-local Player = Players.LocalPlayer
-
- 
-
-local userInput = game:service('UserInputService')
-
-local runService = game:service('RunService')
-
- 
-
-repeat wait() until Player.Character
-
- 
-
-local Character = Player.Character
-
-local pHum = Character:WaitForChild('Humanoid')
-
-local humRoot = Character:WaitForChild('HumanoidRootPart')
-
- 
-
-local Multiplier = 0.1
-
- 
-
-userInput.InputBegan:connect(function(Key)
-
-    if Key.KeyCode == Enum.KeyCode.LeftBracket then
-
-        Multiplier = Multiplier + 0.1
-
-        print(Multiplier)
-
-        wait(0.2)
-
-        while userInput:IsKeyDown(Enum.KeyCode.LeftBracket) do
-
-            wait()
-
-            Multiplier = Multiplier + 0.1
-
-            print(Multiplier)
-
-        end
-
-    end
-
-
-
-    if Key.KeyCode == Enum.KeyCode.RightBracket then
-
-        Multiplier = Multiplier - 0.1
-
-        print(Multiplier)
-
-        wait(0.2)
-
-        while userInput:IsKeyDown(Enum.KeyCode.RightBracket) do
-
-            wait()
-
-            Multiplier = Multiplier - 0.1
-
-            print(Multiplier)
-
-        end
-
-    end
-
-end)
-
- 
-
-runService.Stepped:connect(function()
-
-    if userInput:IsKeyDown(Enum.KeyCode.Q) then
-
-        humRoot.CFrame = humRoot.CFrame + pHum.MoveDirection * Multiplier
-
-    end
-
-end)
+local SecondLabel = SecondPage.AddLabel("NOTE: This may lags your client")
+local SecondButton = SecondPage.AddButton("DEX Explorer (For KRNL Users :troll:)", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/yeehawwasd123/ye/main/dex%20source", true))()
 end)
