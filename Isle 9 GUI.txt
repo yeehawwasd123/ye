@@ -7,7 +7,7 @@ local FirstButton = FirstPage.AddButton("Infinite Yield", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-local FirstLabel = FirstPage.AddLabel("Warning:This script can ruin your game experience heavily, use in caution")
+local FirstLabel = FirstPage.AddLabel("Warning:This can ruin your game experience heavily")
 local FirstButton = FirstPage.AddButton("Isle 9 GUI [OP] (By w a e)", function()
 loadstring(game:HttpGet("https://paste.ee/r/4MNCw/0"))()
 end)
