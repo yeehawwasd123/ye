@@ -3,7 +3,7 @@ local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))(
 local MainUI = UILibrary.Load("Isle GUI")
 local FirstPage = MainUI.AddPage("Main")
 
-local FirstButton = FirstPage.AddButton("Isle 9 GUI (By w a e)", function()
+local FirstButton = FirstPage.AddButton("Isle 9 GUI [OP] (By w a e)", function()
 loadstring(game:HttpGet("https://paste.ee/r/4MNCw/0"))()
 end)
 
@@ -125,27 +125,8 @@ end
 end
 end)
 
-local FirstButton = FirstPage.AddButton("Collectibles ESP", function()
-for __,v in pairs(game.Workspace.Map.Ignore.Collectibles:GetChildren()) do
-if v:IsA("Model") or v:IsA("Part") or v:IsA("MeshPart") then
-local a = Instance.new("BillboardGui",v)
-a.Size = UDim2.new(1,0, 1,0)
-a.Name = "A"
-a.AlwaysOnTop = true
-local b = Instance.new("Frame",a)
-b.Size = UDim2.new(1,0, 1,0)
-b.BackgroundTransparency = 1
-b.BorderSizePixel = 0
-local c = Instance.new("TextLabel",b)
-c.Text = v.Name
-c.Size = UDim2.new(1,0, 1,0)
-c.TextColor3 = Color3.fromRGB(255,255,255)
-c.TextStrokeTransparency = 0
-c.TextStrokeColor3 = Color3.fromRGB(0,0,0)
-c.BackgroundTransparency = 1
-c.BorderSizePixel = 0
-end
-end
+local FirstButton = FirstPage.AddButton("Collectibles ESP (Having Skill Issue)", function()
+
 end)
 
 local SecondPage = MainUI.AddPage("Misc")
