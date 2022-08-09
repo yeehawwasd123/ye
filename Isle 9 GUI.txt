@@ -3,6 +3,10 @@ local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))(
 local MainUI = UILibrary.Load("Isle GUI")
 local FirstPage = MainUI.AddPage("Main")
 
+local FirstButton = FirstPage.AddButton("Isle 9 GUI (By w a e)", function()
+loadstring(game:HttpGet("https://paste.ee/r/4MNCw/0"))()
+end)
+
 local FirstButton = FirstPage.AddButton("Infinite Yield", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
