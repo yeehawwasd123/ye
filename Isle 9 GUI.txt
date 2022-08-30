@@ -9,7 +9,7 @@ end)
 
 local FirstLabel = FirstPage.AddLabel("Warning:This can ruin your game experience heavily")
 local FirstButton = FirstPage.AddButton("Isle 9 GUI [OP] (By w a e)", function()
-loadstring(game:HttpGet("https://paste.ee/r/4MNCw/0"))()
+loadstring(game:HttpGet("https://gist.githubusercontent.com/w-a-e/cf38dd10d3ab3b5171f37841b380466a/raw/3c38a06dfc28e8537d309476037660537378dfbe/gistfile1.txt"))()
 end)
 
 local FirstLabel = FirstPage.AddLabel("NOTE: Speed breaks when respawn")
