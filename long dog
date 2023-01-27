@@ -191,9 +191,9 @@ char.CDValues["H_Cooldown"]:Destroy()
 end)
 end)
 
-local FirstLabel = ThirdPage.AddLabel("True Anubis Moves")
+local FirstLabel = ThirdPage.AddLabel("Secondary Moves")
 
-local ThirdButton = ThirdPage.AddButton("No CD E Sheath on", function()
+local ThirdButton = ThirdPage.AddButton("No CD E2", function()
 runService = game:GetService('RunService')
 shared._id = game:GetService('HttpService'):GenerateGUID(false)
 runService:BindToRenderStep(shared._id, 1, function()
@@ -205,7 +205,7 @@ char.CDValues["E_Cooldown2"]:Destroy()
 end)
 end)
 
-local ThirdButton = ThirdPage.AddButton("No CD R Sheath on", function()
+local ThirdButton = ThirdPage.AddButton("No CD R2", function()
 runService = game:GetService('RunService')
 shared._id = game:GetService('HttpService'):GenerateGUID(false)
 runService:BindToRenderStep(shared._id, 1, function()
@@ -217,7 +217,7 @@ char.CDValues["R_Cooldown2"]:Destroy()
 end)
 end)
 
-local ThirdButton = ThirdPage.AddButton("No CD T Sheath on", function()
+local ThirdButton = ThirdPage.AddButton("No CD T2", function()
 runService = game:GetService('RunService')
 shared._id = game:GetService('HttpService'):GenerateGUID(false)
 runService:BindToRenderStep(shared._id, 1, function()
@@ -229,7 +229,7 @@ char.CDValues["T_Cooldown2"]:Destroy()
 end)
 end)
 
-local ThirdButton = ThirdPage.AddButton("No CD G Sheath on", function()
+local ThirdButton = ThirdPage.AddButton("No CD G2", function()
 runService = game:GetService('RunService')
 shared._id = game:GetService('HttpService'):GenerateGUID(false)
 runService:BindToRenderStep(shared._id, 1, function()
@@ -238,6 +238,18 @@ local lp = game:GetService("Players").LocalPlayer
 local char = lp.character
 
 char.CDValues["G_Cooldown2"]:Destroy()
+end)
+end)
+
+local ThirdButton = ThirdPage.AddButton("No CD Y2", function()
+runService = game:GetService('RunService')
+shared._id = game:GetService('HttpService'):GenerateGUID(false)
+runService:BindToRenderStep(shared._id, 1, function()
+local lp = game:GetService("Players").LocalPlayer
+
+local char = lp.character
+
+char.CDValues["Y_Cooldown2"]:Destroy()
 end)
 end)
 
