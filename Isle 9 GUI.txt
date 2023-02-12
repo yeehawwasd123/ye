@@ -7,7 +7,7 @@ local FirstButton = FirstPage.AddButton("Infinite Yield", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-local FirstLabel = FirstPage.AddLabel("Warning:This can ruin your game experience heavily")
+local FirstLabel = FirstPage.AddLabel("Warning: This may ruin your game experience heavily")
 local FirstButton = FirstPage.AddButton("Isle 9 GUI [OP] (By w a e)", function()
 loadstring(game:HttpGet("https://gist.githubusercontent.com/w-a-e/cf38dd10d3ab3b5171f37841b380466a/raw/3c38a06dfc28e8537d309476037660537378dfbe/gistfile1.txt"))()
 end)
@@ -15,7 +15,7 @@ end)
 local FirstLabel = FirstPage.AddLabel("NOTE: Speed breaks when respawn")
 local FirstLabel = FirstPage.AddLabel("Speed Config Binds: [ and ]")
 
-local FirstButton = FirstPage.AddButton("[Q] Speed -Speed Config Binds are [ and ]-", function()
+local FirstButton = FirstPage.AddButton("[Left Ctrl] Speed -Speed Config Binds are [ and ]-", function()
 local Players = game:service('Players')
 
 local Player = Players.LocalPlayer
@@ -94,7 +94,7 @@ end)
 
 runService.Stepped:connect(function()
 
-    if userInput:IsKeyDown(Enum.KeyCode.Q) then
+    if userInput:IsKeyDown(Enum.KeyCode.LeftControl) then
 
         humRoot.CFrame = humRoot.CFrame + pHum.MoveDirection * Multiplier
 
