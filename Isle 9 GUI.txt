@@ -126,10 +126,6 @@ end
 end
 end)
 
-local FirstButton = FirstPage.AddButton("Collectibles ESP (Having Skill Issue)", function()
-
-end)
-
 local SecondPage = MainUI.AddPage("Misc")
 
 local SecondLabel = SecondPage.AddLabel("NOTE: This may lags your client")
