@@ -11,7 +11,7 @@ game:GetService("Lighting").Atmosphere:Destroy()
 end)
 
 local FirstButton = FirstPage.AddButton("Safe Zone TP", function()
-game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-61 620 -276))
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-71, 592, -270))
 end)
 
 local FirstButton = FirstPage.AddButton("More Sprinting Speed", function()
