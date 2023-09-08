@@ -1,0 +1,135 @@
+local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+
+local MainUI = UILibrary.Load("hihi pizza party!11")
+local FirstPage = MainUI.AddPage("Home")
+local FirstButton = FirstPage.AddButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local FirstButton = FirstPage.AddButton("Remove Fog", function()
+game:GetService("Lighting").Atmosphere:Destroy()
+end)
+
+local FirstButton = FirstPage.AddButton("More Sprinting Speed", function()
+local Players = game:service('Players')
+
+local Player = Players.LocalPlayer
+
+ 
+
+local userInput = game:service('UserInputService')
+
+local runService = game:service('RunService')
+
+ 
+
+repeat wait() until Player.Character
+
+ 
+
+local Character = Player.Character
+
+local pHum = Character:WaitForChild('Humanoid')
+
+local humRoot = Character:WaitForChild('HumanoidRootPart')
+
+ 
+
+local Multiplier = 0.25
+
+ 
+
+userInput.InputBegan:connect(function(Key)
+
+    if Key.KeyCode == Enum.KeyCode.LeftBracket then
+
+        Multiplier = Multiplier + 0.1
+
+        print(Multiplier)
+
+        wait(0.2)
+
+        while userInput:IsKeyDown(Enum.KeyCode.LeftBracket) do
+
+            wait()
+
+            Multiplier = Multiplier + 0.1
+
+            print(Multiplier)
+
+        end
+
+    end
+
+
+
+    if Key.KeyCode == Enum.KeyCode.RightBracket then
+
+        Multiplier = Multiplier - 0.1
+
+        print(Multiplier)
+
+        wait(0.2)
+
+        while userInput:IsKeyDown(Enum.KeyCode.RightBracket) do
+
+            wait()
+
+            Multiplier = Multiplier - 0.1
+
+            print(Multiplier)
+
+        end
+
+    end
+
+end)
+
+ 
+
+runService.Stepped:connect(function()
+
+    if userInput:IsKeyDown(Enum.KeyCode.LeftShift) then
+
+        humRoot.CFrame = humRoot.CFrame + pHum.MoveDirection * Multiplier
+
+    end
+
+end)
+end)
+
+FirstPage.AddLabel("1 AM Stuff")
+
+local FirstButton = FirstPage.AddButton("Get All Pizza", function()
+for i, v in pairs(game.Workspace.GameTriggers.Items.ItemGroup:GetChildren()) do
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(v.CFrame)
+wait(0.5)
+end
+end)
+
+local FirstButton = FirstPage.AddButton("ESP Power Switches", function()
+for __,v in pairs(game.Workspace.GameTriggers.Objectives.PowerSwitches:GetChildren()) do
+if v:IsA("Model") or v:IsA("Part") or v:IsA("MeshPart") then
+local a = Instance.new("BillboardGui",v)
+a.Size = UDim2.new(1,0, 1,0)
+a.Name = "A"
+a.AlwaysOnTop = true
+local b = Instance.new("Frame",a)
+b.Size = UDim2.new(1,0, 1,0)
+b.BackgroundTransparency = 1
+b.BorderSizePixel = 0
+local c = Instance.new("TextLabel",b)
+c.Text = "!"
+c.Size = UDim2.new(1,0, 1,0)
+c.TextColor3 = Color3.fromRGB(0,0,0) --ที่ปรับสี
+c.TextStrokeTransparency = 0
+c.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+c.BackgroundTransparency = 1
+c.BorderSizePixel = 0
+end
+end
+end)
+
+local FirstButton = FirstPage.AddButton("Remove Power Switch ESP ;w;", function()
+workspace.GameTriggers.Objectives.PowerSwitches:Destroy()
+end)
