@@ -130,6 +130,6 @@ end
 end
 end)
 
-local FirstButton = FirstPage.AddButton("Remove Power Switch ESP ;w;", function()
+local FirstButton = FirstPage.AddButton("Remove Power Switches ESP ;w;", function()
 workspace.GameTriggers.Objectives.PowerSwitches:Destroy()
 end)
