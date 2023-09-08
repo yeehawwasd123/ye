@@ -10,6 +10,10 @@ local FirstButton = FirstPage.AddButton("Remove Fog", function()
 game:GetService("Lighting").Atmosphere:Destroy()
 end)
 
+local FirstButton = FirstPage.AddButton("Safe Zone TP", function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-61 620 -276))
+end)
+
 local FirstButton = FirstPage.AddButton("More Sprinting Speed", function()
 local Players = game:service('Players')
 
@@ -130,6 +134,6 @@ end
 end
 end)
 
-local FirstButton = FirstPage.AddButton("Remove Power Switches ESP ;w;", function()
+local FirstButton = FirstPage.AddButton("Remove Power Switch ESP ;w;", function()
 workspace.GameTriggers.Objectives.PowerSwitches:Destroy()
 end)
