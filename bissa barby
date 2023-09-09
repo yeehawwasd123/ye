@@ -6,10 +6,6 @@ local FirstButton = FirstPage.AddButton("Infinite Yield", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-local FirstButton = FirstPage.AddButton("Remove Fog", function()
-game:GetService("Lighting").Atmosphere:Destroy()
-end)
-
 local FirstButton = FirstPage.AddButton("Safe Zone TP", function()
 game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-61, 620, -276))
 end)
