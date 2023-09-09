@@ -107,7 +107,7 @@ FirstPage.AddLabel("1 AM Stuff")
 local FirstButton = FirstPage.AddButton("Get All Pizza", function()
 for i, v in pairs(game.Workspace.GameTriggers.Items.ItemGroup:GetChildren()) do
 game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(v.CFrame)
-wait(0.5)
+wait(0.25)
 end
 end)
 
@@ -136,4 +136,16 @@ end)
 
 local FirstButton = FirstPage.AddButton("Remove Power Switch ESP ;w;", function()
 workspace.GameTriggers.Objectives.PowerSwitches:Destroy()
+end)
+
+FirstPage.AddLabel("2 AM Stuff")
+local FirstButton = FirstPage.AddButton("Get All Wires", function()
+for i, v in pairs(game.Workspace.GameTriggers.Items.ItemGroup:GetChildren()) do
+game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(v.CFrame)
+wait(0.25)
+end
+end)
+
+local FirstButton = FirstPage.AddButton("Teleport to all gens", function()
+
 end)
