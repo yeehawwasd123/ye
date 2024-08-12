@@ -1,0 +1,200 @@
+repeat wait() until game:IsLoaded()
+local UILibrary = loadstring(game:HttpGet("https://pastebin.com/raw/V1ca2q9s"))()
+
+local MainUI = UILibrary.Load("Sakura Stand GUI")
+local FirstPage = MainUI.AddPage("Stuff")
+
+local FirstButton = FirstPage.AddButton("Stand Storage NPC", function()
+
+end)
+
+local FirstButton = FirstPage.AddButton("Sell Items NPC", function()
+
+end)
+
+local FirstButton = FirstPage.AddButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+local FirstButton = FirstPage.AddButton("Enable Reset", function()
+while true do
+wait(0.1)
+game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
+end
+end)
+
+local FirstButton = FirstPage.AddButton("Arcade Spinning", function()
+local args = {
+    [1] = false,
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").GlobalUsedRemotes.ArcadePurchase:FireServer(unpack(args))
+end)
+
+local FirstButton = FirstPage.AddButton("Auto Mastery", function()
+while true do
+    wait(1)
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("UpgradeMas"):FireServer()
+end
+end)
+
+local SecondPage = MainUI.AddPage("kil")
+local SecondButton = SecondPage.AddButton("Kill Chariot Requiem", function()
+game:GetService("Workspace").Living["Chariot Requiem"].Humanoid.Health = 0
+end)
+
+local SecondButton = SecondPage.AddButton("Kill Jotaro Kujo", function()
+game:GetService("Workspace").Living["Jotaro Kujo"].Humanoid.Health = 0
+end)
+
+local SecondButton = SecondPage.AddButton("Kill Thugs", function()
+for i,v in pairs(
+game:GetService("Workspace").Living:GetChildren())
+do
+if v:IsA("Model") then
+if v:FindFirstChildOfClass("Humanoid") then
+if v.Name == "Thug" then
+v.Humanoid.Health = 0
+end
+end
+end
+end
+end)
+
+local SecondButton = SecondPage.AddButton("Kill Bandits", function()
+for i,v in pairs(
+game:GetService("Workspace").Living:GetChildren())
+do
+if v:IsA("Model") then
+if v:FindFirstChildOfClass("Humanoid") then
+if v.Name == "Bandit" then
+v.Humanoid.Health = 0
+end
+end
+end
+end
+end)
+
+local ThirdPage = MainUI.AddPage("Auto Sell Items")
+
+local ThirdButton = ThirdPage.AddButton("Arrow", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Arrow"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Mysterious Camera", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Mysterious Camera"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Hamon Manual", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Hamon Manual"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Rokakaka", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Rokakaka"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Stop Sign", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Stop Sign"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Stone Mask", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Stone Mask"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Spin Manual", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Spin Manual"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Barrel", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Barrel"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Bomu Bomu Devil Fruit", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Bomu Bomu Devil Fruit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Mochi Mochi Devil Fruit", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Mochi Mochi Devil Fruit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
+
+local ThirdButton = ThirdPage.AddButton("Bari Bari Devil Fruit", function()
+while true do
+    wait(1)
+local args = {
+    [1] = "Bari Bari Devil Fruit"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GlobalUsedRemotes"):WaitForChild("SellItem"):FireServer(unpack(args))
+end
+end)
